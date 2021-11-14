@@ -1,0 +1,169 @@
+@import "mixins"
+
+.header
+  position: relative
+  display: flex
+  justify-content: center
+  z-index: 5
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    content: ''
+    width: 100%
+    height: 100%
+    background: #fff
+    z-index: 4
+
+  &__body
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 10px 0px 10px 0px
+    *
+      z-index: 5
+
+.navmenu
+  height: 50px
+  @media (max-width: 550px)
+    display: none
+
+  &__body
+    display: flex
+    height: 100%
+
+  &__list
+    display: flex
+
+    li
+      display: flex
+      justify-content: center
+      align-items: center
+
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+
+        text-transform: uppercase
+        font-family: bebas
+        color: #b9b9b9
+        padding: 0px 15px 0px 15px
+        @include adaptive-property ('font-size',16, 13)
+        @include size(100%, 100%)
+
+        transition: all 0.2s ease 0s
+
+        &:hover
+          color: #e8663c
+        &.active
+          color: #e8663c
+        span
+          padding: 0px 0px 0px 0.2em
+
+.fullscreen-navmenu
+  position: fixed
+  top: 0
+  right: -100%
+  z-index: -1
+  @include size (100%,100%)
+  @include adaptive-property ('font-size',25, 20)
+  color: #fff
+
+  display: flex
+  flex-flow: column nowrap
+
+  background: #000000ad
+  transition: all 0.5s ease
+
+  @media (min-width: 550px)
+    display: none
+
+  &.active
+    right: 0
+
+  &__body
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    overflow: auto
+    &:before
+      position: relative
+      top: 0
+      left: 0
+      content: ''
+      flex: 0 0 70px
+
+    ul
+      width: 100%
+      li
+        text-align: center
+        padding: 25px 0px 25px 0px
+        margin: 0 auto
+
+        width: 50%
+        cursor: pointer
+        border-bottom: 1px solid #fff
+
+        &:last-child
+          border: none
+        &:hover
+          a
+            color: #e8663c
+        a
+          color: #fff
+
+.header__burger
+  display: none
+  border-radius: 0px
+  background-color: transparent
+
+  &.active
+    div
+      visibility: hidden
+      opacity: 0
+      pointer-events: none
+      background: #e8663c
+
+      transform-origin: left
+
+      &:first-child
+        visibility: visible
+        opacity: 1
+        pointer-events: all
+
+        transform: rotate(46deg)
+
+      &:last-child
+        visibility: visible
+        opacity: 1
+        pointer-events: all
+
+        transform: rotate(-46deg)
+
+  @media (max-width: 550px)
+    z-index: 5
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    justify-content: space-between
+    align-items: center
+
+    width: 30px
+    height: 24px
+
+    cursor: pointer
+    transition: all 0.5s
+
+    div
+      display: inline-block
+      height: 0.2em
+      width: 100%
+      background: #e8663c
+      transition: all 0.3s
+
+.logo
+  z-index: 10
+
+  img
+    height: 100%

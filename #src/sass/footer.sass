@@ -1,0 +1,109 @@
+@import "mixins"
+
+.footer
+  background: #f0aa93
+  color: #fff
+  line-height: 1.2
+
+  display: flex
+  justify-content: center
+  min-height: 100px
+  @media (min-width: 600px)
+    &:before
+      content: ''
+      background: #fff
+      padding: 0px 5px 0px 5px
+    &:after
+      content: ''
+      background: #fff
+      padding: 0px 5px 0px 5px
+
+  &__body
+    display: grid
+    grid-template-columns: repeat(auto-fit, 33.333%)
+
+    background: #e8663c
+    margin: 0 !important
+    padding: 35px 35px 35px 35px
+
+    @media (max-width: 768px)
+      grid-template-columns: repeat(auto-fit, 47%)
+      gap: 20px
+    @media (max-width: 600px)
+      grid-template-columns: none
+      width: 100% !important
+      padding: 15px 10px 15px 10px
+
+  &__block
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+
+    ul
+      li
+        margin: 0px 0px 20px 0px
+        &:last-child
+          margin-bottom: 0
+
+    @media (min-width: 768px)
+      @include adaptive-property ('padding-right',40,20)
+
+      &:first-child
+        padding-left: 0
+      &:last-child
+        padding-right: 0
+
+    &-title
+      font-family: bebas
+      @include adaptive-property ('font-size',20, 16)
+      padding: 0px 0px 25px 0px
+
+  &__text-block
+
+  &__contact-refs
+    display: inline-flex
+    flex-flow: column nowrap
+    a
+      color: #fff
+      line-height: 2
+
+      transition: all 0.2s ease
+      &:hover
+        color: #e0dfdf
+
+      @media (max-width: 600px)
+        padding: 5px 5px 5px 0px
+        @include adaptive-property ('font-size',15, 15)
+
+  &__twitter-subscribe
+    display: inline-block
+    margin: 10px 0px 10px 0px
+
+.message-block
+
+  &__body
+    padding: 0px 0px 15px 0px
+
+  &__text
+
+  &__author
+
+  &__date
+    color: #f3b29d
+    display: inline-block
+    margin: 5px 0px 0px 0px
+
+    @media (max-width: 768px)
+      color: #fdbea9
+
+  &__time-ago
+
+.socials
+  @media (max-width: 600px)
+    display: flex
+    justify-content: center
+    align-items: center
+
+  a
+    @media (max-width: 600px)
+      padding: 0px 10px 0px 10px

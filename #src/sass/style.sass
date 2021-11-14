@@ -1,0 +1,83 @@
+$containerWidth: 940
+// HelveticaNeueCyr-Roman
+$mainFontFamily: helv
+$mainFontColor: #414141
+$mainFontSize: 13
+$background: #fff
+
+@import "nullStyle"
+@import "mixins"
+@import "header"
+@import "footer"
+@import "fonts"
+
+body
+  height: 100%
+  color: $mainFontColor
+  font-family: $mainFontFamily
+  @include adaptive-property ('font-size',$mainFontSize,12)
+
+  &.fixed
+    overflow: hidden
+
+  button
+    color: #fff
+
+.main
+  width: 100%
+
+  background: $background
+
+  &__body
+    background: $background
+
+.twitter-ref
+  color: #f3b29d
+
+  &:before
+    content: '@'
+
+  @media (max-width: 768px)
+    color: #fae0d7
+
+.fullscreen
+  position: relative
+
+  display: flex
+  justify-content: center
+  align-items: center
+
+  @include size(auto, 100vh)
+  @include adaptive-property ('min-height',500, 500)
+
+  &__body
+
+.content
+
+  &__body
+
+.container
+  margin: auto
+  @media (min-width: 768px)
+    width: 80%
+
+  @media (min-width: 426px) and (max-width: 768px)
+    width: 80%
+
+  @media (max-width: 425px)
+    width: 95%
+
+.adaptive-image
+  display: block
+  position: relative
+  padding: 0px 0px 100% 0px
+
+  img
+    position: absolute
+    top: 0
+    left: 0
+    @include size (100%,100%)
+    object-fit: cover
+
+.block-title
+  text-transform: uppercase
