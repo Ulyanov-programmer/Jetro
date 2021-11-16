@@ -81,6 +81,9 @@ body
   &__body
     margin: 0 10px
 
+    @media (max-width: 768px)
+      width: 100% !important
+
 .page-title
   text-transform: uppercase
   @include adaptive-property ('font-size',24, 18)
@@ -99,7 +102,6 @@ body
     @extend .slider__prev-btn
 
 .main-slider
-
   &__slide
 
   &__img
@@ -182,15 +184,84 @@ body
       transition: all 0.2s ease
       object-fit: cover
 
+.benefits
+
+  &__body
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+
+    @media (min-width: 500px)
+      margin: 0px -30px 0px -30px
+
+  &__item
+    flex: 1 0 33.333%
+    min-width: 270px
+
+    @media (max-width: 500px)
+      flex: 1 0 100%
+      min-width: auto
+
+.advantage
+  padding: 30px 30px 30px 30px
+
+  @media (max-width: 500px)
+    display: flex
+    flex-flow: column nowrap
+    padding: 10px 10px 10px 10px
+
+  &__header
+    display: flex
+    align-items: center
+    padding: 0px 0px 20px 0px
+
+  &__icon
+    display: inline-block
+    padding: 0px 22px 0px 0px
+    img
+
+  &__title
+    color: #e8663c
+    font-family: bebas
+    @include adaptive-property ('font-size',18, 16)
+
+  &__text
+    line-height: 1.5
+    padding: 0px 0px 20px 0px
+
+  &__ref
+    flex-grow: 0
+    font-family: bebas
+    text-transform: uppercase
+    color: #fff
+    background: #e8663c
+    border: 1px solid #e8663c
+    padding: 5px 9px 5px 9px
+
+    transition: all 0.2s ease
+    &:hover
+      color: #e8663c
+      background: #fff
+
+    @media (max-width: 500px)
+      padding: 7px 12px 7px 12px
+      letter-spacing: 1px
+      font-size: 15px
+      text-align: center
+
+.block
+  padding-top: 30px
+  padding-bottom: 30px
+
 .container
   @media (min-width: 768px)
     width: 80%
 
   @media (min-width: 426px) and (max-width: 768px)
-    width: 95%
+    width: 80%
 
   @media (max-width: 425px)
-    width: 98%
+    width: 95%
 
 .block-title
   text-transform: uppercase

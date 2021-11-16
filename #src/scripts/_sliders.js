@@ -78,6 +78,7 @@ const mainSwiper = new Swiper('.main-slider', {
     nextEl: ".main-slider__next-btn", prevEl: ".main-slider__prev-btn",
     disabledClass: 'unactive',
   },
+  spaceBetween: 1,
   grabCursor: true,
   watchOverflow: true,
 
