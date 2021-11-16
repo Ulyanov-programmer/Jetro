@@ -25,47 +25,12 @@ body
 
 .main
   width: 100%
+  min-height: 100vh
 
   background: $background
 
   &__body
     background: $background
-
-.twitter-ref
-  color: #f3b29d
-
-  &:before
-    content: '@'
-
-  @media (max-width: 768px)
-    color: #fae0d7
-
-.fullscreen
-  position: relative
-
-  display: flex
-  justify-content: center
-  align-items: center
-
-  @include size(auto, 100vh)
-  @include adaptive-property ('min-height',500, 500)
-
-  &__body
-
-.content
-
-  &__body
-
-.container
-  margin: auto
-  @media (min-width: 768px)
-    width: 80%
-
-  @media (min-width: 426px) and (max-width: 768px)
-    width: 80%
-
-  @media (max-width: 425px)
-    width: 95%
 
 .adaptive-image
   display: block
@@ -78,6 +43,154 @@ body
     left: 0
     @include size (100%,100%)
     object-fit: cover
+
+.twitter-ref
+  color: #f3b29d
+
+  &:before
+    content: '@'
+
+  @media (max-width: 768px)
+    color: #fae0d7
+
+.content
+
+  &__body
+    margin: auto
+
+.page-borders
+  display: flex
+  justify-content: center
+
+  @media (min-width: 600px)
+    &:before
+      content: ''
+      background: #f0aa93
+      flex-grow: 1
+    &:after
+      content: ''
+      background: #f0aa93
+      flex-grow: 1
+
+  &__fixed-borders
+    &:before
+      max-height: 60px
+    &:after
+      max-height: 60px
+
+  &__body
+    margin: 0 10px
+
+.page-title
+  text-transform: uppercase
+  @include adaptive-property ('font-size',24, 18)
+  color: #fff
+  font-family: bebas
+  background: #e8603c
+  padding: 20px 20px 20px 20px
+
+.slider
+
+  &__prev-btn
+    @media (max-width: 768px)
+      display: none
+
+  &__next-btn
+    @extend .slider__prev-btn
+
+.main-slider
+
+  &__slide
+
+  &__img
+    position: relative
+    padding-bottom: 43%
+
+    @media (max-width: 768px)
+      padding-bottom: 65%
+
+    img
+
+  &__info
+    position: absolute
+    width: 45%
+    bottom: 5%
+    left: 4%
+
+    padding: 23px 18px 23px 18px
+    background: #e8673cc4
+    color: #fff
+
+    @media (max-width: 1080px)
+      width: 65%
+      bottom: 5%
+      left: 50%
+      transform: translate(-50%, -0%)
+    @media (max-width: 768px)
+      width: 100%
+      bottom: 0
+      left: 50%
+      transform: translate(-50%, -0%)
+
+  &__title
+    display: inline-block
+    font-family: bebas
+    @include adaptive-property ('font-size',20, 16)
+    padding: 0px 0px 20px 0px
+
+  &__text
+    line-height: 1.2
+
+  &__prev-btn
+    position: absolute
+    top: 50%
+    left: 5%
+    transform: translate(-50%, -50%)
+    cursor: pointer
+    z-index: 1
+    padding: 50px 30px 50px 30px
+
+    &:hover
+      path
+        opacity: 1
+
+    &.unactive
+      opacity: 0.2
+
+  &__next-btn
+    @extend .main-slider__prev-btn
+    left: 95%
+    transform: translate(-50%, -50%) rotate(180deg)
+
+  &__demos
+    margin-top: 15px
+
+  &__demo-img
+    padding-bottom: 15%
+
+    @media (max-width: 768px)
+      padding-bottom: 20%
+    @media (max-width: 426px)
+      padding-bottom: 25%
+
+    @media (min-width: 768px)
+      &:hover
+        img
+          transform: scale(1.1)
+
+    img
+      transition: all 0.2s ease
+      object-fit: cover
+
+.container
+  @media (min-width: 768px)
+    width: 80%
+
+  @media (min-width: 426px) and (max-width: 768px)
+    width: 95%
+
+  @media (max-width: 425px)
+    width: 98%
 
 .block-title
   text-transform: uppercase

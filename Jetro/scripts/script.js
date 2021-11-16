@@ -29,7 +29,7 @@ const burger = doc.getElementById('burgerButton');
 burger.addEventListener('click', showOrHideFullscreenNav);
 
 let fsMenuIsActive = false;;
-const someSwiper = new Swiper('.swiper', {
+// const someSwiper = new Swiper('.swiper', {
   /*
 
   navigation: {
@@ -85,5 +85,35 @@ const someSwiper = new Swiper('.swiper', {
       crossFade: true,
   }
   */
+// });
+
+const mainSwiperDemos = new Swiper('.main-slider__demos', {
+  spaceBetween: 15,
+  watchOverflow: true,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 6,
+    },
+    426: {
+      slidesPerView: 3,
+    },
+    320: {
+      slidesPerView: 2,
+    },
+  },
 });
-;
+
+const mainSwiper = new Swiper('.main-slider', {
+  navigation: {
+    nextEl: ".main-slider__next-btn", prevEl: ".main-slider__prev-btn",
+    disabledClass: 'unactive',
+  },
+  grabCursor: true,
+  watchOverflow: true,
+
+  thumbs: {
+    swiper: mainSwiperDemos,
+    slideThumbActiveClass: 'active',
+  },
+});;
