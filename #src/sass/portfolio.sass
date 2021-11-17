@@ -1,0 +1,21 @@
+.work
+  &__preview
+    position: relative
+
+    &:after
+      content: ''
+    img
+      transition: all 0.2s ease
+      
+    &:hover
+      img
+        filter: brightness(0.4)
+      &:after
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: inline-block
+        pointer-events: none
+
+        content: url('../img/add.svg')

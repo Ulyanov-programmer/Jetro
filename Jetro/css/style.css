@@ -185,11 +185,18 @@ h6 {
   color: #e8663c;
 }
 
+.navmenu__list li a:hover span {
+  color: #f3af9d;
+}
+
 .navmenu__list li a.active {
   color: #e8663c;
 }
 
 .navmenu__list li a span {
+  -webkit-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
   padding: 0px 0px 0px 0.2em;
 }
 
@@ -937,6 +944,10 @@ body button {
 }
 
 @media (max-width: 426px) {
+  .page-title {
+    text-align: center;
+  }
+
   .main-slider__demo-img {
     padding-bottom: 25%;
   }
