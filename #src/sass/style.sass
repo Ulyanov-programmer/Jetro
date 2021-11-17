@@ -10,6 +10,7 @@ $background: #fff
 @import "header"
 @import "footer"
 @import "fonts"
+@import "_general"
 
 body
   height: 100%
@@ -31,18 +32,6 @@ body
 
   &__body
     background: $background
-
-.adaptive-image
-  display: block
-  position: relative
-  padding: 0px 0px 100% 0px
-
-  img
-    position: absolute
-    top: 0
-    left: 0
-    @include size (100%,100%)
-    object-fit: cover
 
 .twitter-ref
   color: #f3b29d
@@ -82,7 +71,7 @@ body
     margin: 0 10px
 
     @media (max-width: 768px)
-      width: 100% !important
+      width: 100%
 
 .page-title
   text-transform: uppercase
@@ -222,8 +211,6 @@ body
 
   &__title
     color: #e8663c
-    font-family: bebas
-    @include adaptive-property ('font-size',18, 16)
 
   &__text
     line-height: 1.5
@@ -249,19 +236,59 @@ body
       font-size: 15px
       text-align: center
 
-.block
-  padding-top: 30px
-  padding-bottom: 30px
+.works
 
-.container
-  @media (min-width: 768px)
-    width: 80%
+  &__title
+    color: #e8603c
+    padding: 0px 0px 25px 0px
 
-  @media (min-width: 426px) and (max-width: 768px)
-    width: 80%
+  &__body
 
-  @media (max-width: 425px)
-    width: 95%
+  &__items
+    display: grid
+    grid-template-columns: repeat(4, minmax(150px, 1fr))
+    gap: 30px
+
+    @media (max-width: 890px)
+      grid-template-columns: repeat(3, minmax(120px, 1fr))
+    @media (max-width: 550px)
+      grid-template-columns: repeat(2, minmax(120px, 1fr))
+      gap: 15px
+
+.work
+
+  &__preview
+
+  &__body
+    padding: 13px 10px 13px 10px
+    font-family: bebas
+    border: 1px solid #dbdbdb
+    border-top: none
+
+  &__title
+    display: block
+    letter-spacing: 0.7px
+    text-transform: uppercase
+    color: #b9b9b9
+    padding: 0px 0px 8px 0px
+    @include adaptive-property ('font-size',18, 14)
+
+  &__date
+    text-transform: uppercase
+    color: #e8663c
 
 .block-title
   text-transform: uppercase
+  font-family: bebas
+  @include adaptive-property ('font-size',18, 16)
+
+  &_styled
+    @extend .block-title
+    display: flex
+
+    &:after
+      content: ''
+      display: inline-block
+      flex-grow: 1
+      background: url('../img/line.webp') repeat center / cover
+      margin: 0px 0px 0px 20px
