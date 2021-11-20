@@ -151,12 +151,14 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.navmenu__list li:not(:last-child) {
+  padding: 0px 25px 0px 0px;
 }
 
 .navmenu__list li a {
@@ -172,13 +174,13 @@ h6 {
   text-transform: uppercase;
   font-family: bebas;
   color: #b9b9b9;
-  padding: 0px 15px 0px 15px;
-  font-size: calc(13px + (16 - 13) * ((100vw - 320px) / (940 - 320)));
-  width: 100%;
-  height: 100%;
+  font-size: calc(13px + (17 - 13) * ((100vw - 320px) / (940 - 320)));
   -webkit-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
 }
 
 .navmenu__list li a:hover {
@@ -351,12 +353,8 @@ h6 {
           justify-content: flex-start;
 }
 
-.footer__block ul li {
+.footer__block ul li:not(:last-child) {
   margin: 0px 0px 20px 0px;
-}
-
-.footer__block ul li:last-child {
-  margin-bottom: 0;
 }
 
 .footer__block-title {
@@ -390,17 +388,20 @@ h6 {
 
 .footer__twitter-subscribe {
   display: inline-block;
-  margin: 10px 0px 10px 0px;
+  padding: 10px 0px 10px 0px;
 }
 
 .message-block__body {
   padding: 0px 0px 15px 0px;
 }
 
+.message-block__body > *:not(:last-child) {
+  padding-bottom: 10px;
+}
+
 .message-block__date {
   color: #f3b29d;
   display: inline-block;
-  margin: 5px 0px 0px 0px;
 }
 
 @font-face {
@@ -451,11 +452,6 @@ h6 {
      object-fit: cover;
 }
 
-.block {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 body {
   height: 100%;
   color: #414141;
@@ -491,6 +487,11 @@ body button {
 
 .content__body {
   margin: auto;
+}
+
+.content__body > *:not(:last-child) {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .page-borders {
@@ -619,6 +620,10 @@ body button {
   padding: 30px 30px 30px 30px;
 }
 
+.advantage > *:not(:last-child) {
+  padding: 0px 0px 20px 0px;
+}
+
 .advantage__header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -626,12 +631,11 @@ body button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0px 0px 20px 0px;
 }
 
 .advantage__icon {
   display: inline-block;
-  padding: 0px 22px 0px 0px;
+  padding: 0px 20px 0px 0px;
 }
 
 .advantage__title {
@@ -640,7 +644,7 @@ body button {
 
 .advantage__text {
   line-height: 1.5;
-  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 5px 0px;
 }
 
 .advantage__ref {
@@ -681,12 +685,15 @@ body button {
   border-top: none;
 }
 
+.work__body > *:not(:last-child) {
+  padding-bottom: 10px;
+}
+
 .work__title {
   display: block;
   letter-spacing: 0.7px;
   text-transform: uppercase;
   color: #b9b9b9;
-  padding: 0px 0px 8px 0px;
   font-size: calc(14px + (18 - 14) * ((100vw - 320px) / (940 - 320)));
 }
 
@@ -761,6 +768,15 @@ body button {
 }
 
 @media (min-width: 768px) {
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+  }
+
+  html ::-webkit-scrollbar {
+    width: 0px;
+  }
+
   .footer__block {
     padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (940 - 320)));
   }
@@ -960,15 +976,6 @@ body button {
 }
 
 @media (min-width: 426px) and (max-width: 768px) {
-  html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  html ::-webkit-scrollbar {
-    width: 0px;
-  }
-
   .container {
     width: 80%;
   }

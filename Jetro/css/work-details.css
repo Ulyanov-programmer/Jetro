@@ -1,0 +1,24 @@
+.content__body {
+  margin-top: 20px;
+}
+
+.work-details__body {
+  padding: 0px 0px 25px 0px;
+}
+
+.work-details__body > *:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.work-details__image {
+  padding: 0px 0px 43% 0px;
+}
+
+.work-details__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.work-details__text-block {
+  line-height: 1.5;
+}

@@ -41,9 +41,8 @@
 
     ul
       li
-        margin: 0px 0px 20px 0px
-        &:last-child
-          margin-bottom: 0
+        &:not(:last-child)
+          margin: 0px 0px 20px 0px
 
     @media (min-width: 768px)
       @include adaptive-property ('padding-right',40,20)
@@ -78,12 +77,15 @@
 
   &__twitter-subscribe
     display: inline-block
-    margin: 10px 0px 10px 0px
+    padding: 10px 0px 10px 0px
 
 .message-block
 
   &__body
     padding: 0px 0px 15px 0px
+    >*
+      &:not(:last-child)
+        padding-bottom: 10px
 
   &__text
 
@@ -92,7 +94,6 @@
   &__date
     color: #f3b29d
     display: inline-block
-    margin: 5px 0px 0px 0px
 
     @media (max-width: 768px)
       color: #fdbea9

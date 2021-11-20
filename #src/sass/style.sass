@@ -46,6 +46,10 @@ body
 
   &__body
     margin: auto
+    >*
+      &:not(:last-child)
+        margin-bottom: 15px
+        margin-top: 15px
 
 .page-borders
   display: flex
@@ -196,6 +200,10 @@ body
 
 .advantage
   padding: 30px 30px 30px 30px
+  
+  >*
+    &:not(:last-child)
+      padding: 0px 0px 20px 0px
 
   @media (max-width: 500px)
     display: flex
@@ -205,11 +213,10 @@ body
   &__header
     display: flex
     align-items: center
-    padding: 0px 0px 20px 0px
 
   &__icon
     display: inline-block
-    padding: 0px 22px 0px 0px
+    padding: 0px 20px 0px 0px
     img
 
   &__title
@@ -217,7 +224,7 @@ body
 
   &__text
     line-height: 1.5
-    padding: 0px 0px 20px 0px
+    margin: 0px 0px 5px 0px
 
   &__ref
     flex-grow: 0
@@ -267,13 +274,15 @@ body
     font-family: bebas
     border: 1px solid #dbdbdb
     border-top: none
+    >*
+      &:not(:last-child)
+        padding-bottom: 10px
 
   &__title
     display: block
     letter-spacing: 0.7px
     text-transform: uppercase
     color: #b9b9b9
-    padding: 0px 0px 8px 0px
     @include adaptive-property ('font-size',18, 14)
 
   &__date

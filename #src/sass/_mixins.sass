@@ -12,3 +12,8 @@
 
 @mixin adaptive-property($property, $value, $min-value)
   #{$property}: calc(#{$min-value + px} + (#{$value} - #{$min-value}) * ((100vw - 320px) / (#{$containerWidth} - 320)))
+
+@mixin flex-centring()
+  justify-content: center
+  align-items: center
+  

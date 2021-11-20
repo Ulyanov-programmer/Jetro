@@ -1,3 +1,5 @@
+@import "mixins"
+$containerWidth: 940
 .work
   &__preview
     position: relative
@@ -6,7 +8,7 @@
       content: ''
     img
       transition: all 0.2s ease
-      
+
     &:hover
       img
         filter: brightness(0.4)
@@ -19,3 +21,24 @@
         pointer-events: none
 
         content: url('../img/add.svg')
+
+.works-filter
+
+  &__body
+    display: flex
+    flex-flow: row wrap
+    >*
+      &:not(:last-child)
+        margin-right: 15px
+
+  &__btn
+    font-family: bebas
+    text-transform: uppercase
+    color: #b9b9b9
+    @include adaptive-property ('font-size',17, 13)
+    padding: 10px 10px 10px 10px
+
+    transition: all 0.2s ease
+    &:hover
+      color: #fff
+      background: #e8663c

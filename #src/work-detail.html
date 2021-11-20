@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('_head.html', {
+"title": "Jetro",
+"activePage": "10",
+})
+
+<body>
+  @@include('_header.html', {
+  "activeLink": "0"
+  })
+
+  <main class="main">
+    <div class="main__body">
+      <div class='page-borders'>
+        <div class='page-borders__body container'>
+          <h1 class="page-title">Slider Plugin</h1>
+        </div>
+      </div>
+      <section class='content'>
+        <div class="content__body container">
+          <section class='work-details'>
+            <div class='work-details__body'>
+              <div class="work-details__image adaptive-image">
+                <img src="img/sliderImg.jpg" alt='workNameImg' width=200 height=200>
+              </div>
+              <p class="work-details__text-block">
+                Praesent in dictum est. Fusce scelerisque nibh in sem rhoncus semper. Sed nisi risus, adipiscing eu
+                mollis luctus,
+                elementum at lacus. Suspendisse porta, eros eu fermentum molestie, purus erat hendrerit tellus, sodales
+                rhoncus justo
+                sapien in lacus. Morbi tincidunt lorem vitae turpis molestie lacinia. Vivamus nec nulla turpis. Ut
+                placerat lacus
+                aliquet ipsum lobortis vitae varius felis ullamcorper. Maecenas pharetra imperdiet dolor eu pulvinar.
+              </p>
+              <p class="work-details__text-block">
+                Nullam justo quam, tristique sit amet facilisis non, commodo vel nunc. In quam libero, pulvinar et
+                scelerisque vitae,
+                molestie euismod justo. Donec tortor magna, vehicula in facilisis sit amet, ultricies nec massa.
+                Curabitur at tincidunt
+                sem. Mauris nulla justo, ornare in condimentum non, eleifend at nibh. Nullam mattis faucibus odio, sit
+                amet aliquam urna
+                lobortis sit amet. Aliquam mauris elit, consectetur vestibulum tincidunt vitae, sodales vel libero.
+                Phasellus malesuada,
+                metus vitae lobortis sodales, diam lacus lacinia metus, id sodales ante urna in urna. Duis elementum
+                luctus mi, et
+                euismod leo aliquet at. Proin justo est, elementum in posuere ac, pharetra non ipsum. Phasellus sit amet
+                nisi quis lacus
+                hendrerit elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                turpis egestas. Morbi
+                bibendum enim ut sapien pellentesque lacinia. Aliquam fringilla sem eget sem pulvinar egestas. Duis
+                congue lorem id mi
+                scelerisque gravida. Ut in lacus libero.
+              </p>
+            </div>
+          </section>
+          <section class='works'>
+            <div class='works__body'>
+              <h2 class="works__title block-title_styled">ReCent WoRks</h2>
+              <div class="works__items">
+                <a href="#" class="work">
+                  <div class="work__preview adaptive-image">
+                    <img src="img/contentImg4.jpg" loading='lazy' alt='work1' width=30 height=30>
+                  </div>
+                  <div class="work__body">
+                    <span class="work__title">Character Design</span>
+                    <span class="work__date">JuNe 15.2012</span>
+                  </div>
+                </a>
+                <a href="#" class="work">
+                  <div class="work__preview adaptive-image">
+                    <img src="img/contentImg.jpg" loading='lazy' alt='work1' width=30 height=30>
+                  </div>
+                  <div class="work__body">
+                    <span class="work__title">Character Design</span>
+                    <span class="work__date">JuNe 15.2012</span>
+                  </div>
+                </a>
+                <a href="#" class="work">
+                  <div class="work__preview adaptive-image">
+                    <img src="img/contentImg2.jpg" loading='lazy' alt='work1' width=30 height=30>
+                  </div>
+                  <div class="work__body">
+                    <span class="work__title">Character Design</span>
+                    <span class="work__date">JuNe 15.2012</span>
+                  </div>
+                </a>
+                <a href="#" class="work">
+                  <div class="work__preview adaptive-image">
+                    <img src="img/contentImg3.jpg" loading='lazy' alt='work1' width=30 height=30>
+                  </div>
+                  <div class="work__body">
+                    <span class="work__title">Character Design</span>
+                    <span class="work__date">JuNe 15.2012</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+      </section>
+    </div>
+  </main>
+
+  @@include('_footer.html')
+
+</body>
+@@include('_scripts.html', {
+'filter': false,
+})
+
+</html>

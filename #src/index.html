@@ -136,16 +136,16 @@
       </div>
       <section class='content'>
         <div class="content__body container">
-          <section class='benefits block'>
+          <section class='benefits'>
             <div class='benefits__body'>
               <div class="benefits__item advantage">
-                <div class="advantage__header">
+                <header class="advantage__header">
                   <div class="advantage__icon">
                     <img src="img/icons/chek.svg" loading='lazy' alt='advantageIcon' width=45 height=45>
                   </div>
                   <h2 class="advantage__title block-title">Check out my latest
                     portfolio items</h2>
-                </div>
+                </header>
 
                 <p class="advantage__text">Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus.
                   Aliquam ullamcorper dui sed magna posue re
@@ -155,13 +155,13 @@
                 <a class="advantage__ref" href='#' target='_blank' rel='noopener noreferrer'>MoRe</a>
               </div>
               <div class="benefits__item advantage">
-                <div class="advantage__header">
+                <header class="advantage__header">
                   <div class="advantage__icon">
                     <img src="img/icons/offer.svg" loading='lazy' alt='advantageIcon' width=49 height=41>
                   </div>
                   <h2 class="advantage__title block-title">Offer Top Notch Quality
                     Work & Services</h2>
-                </div>
+                </header>
                 <p class="advantage__text">Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus.
                   Aliquam ullamcorper dui sed magna posue re
                   ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius
@@ -170,13 +170,13 @@
                 <a class="advantage__ref" href='#' target='_blank' rel='noopener noreferrer'>MoRe</a>
               </div>
               <div class="benefits__item advantage">
-                <div class="advantage__header">
+                <header class="advantage__header">
                   <div class="advantage__icon">
                     <img src="img/icons/man.svg" loading='lazy' alt='advantageIcon' width=45 height=45>
                   </div>
                   <h2 class="advantage__title block-title">Follow Me on Twitter,
                     Facebook & Pinterest</h2>
-                </div>
+                </header>
                 <p class="advantage__text">Maecenas ipsum metus, semper hendrerit varius mattis, congue sit amet tellus.
                   Aliquam ullamcorper dui sed magna posue re
                   ut elementum enim rutrum. Nam mi erat, porta id ultrices nec, pellentesque vel nunc. Cras varius
@@ -186,11 +186,11 @@
               </div>
             </div>
           </section>
-          <section class='works block'>
+          <section class='works'>
             <div class='works__body'>
               <h2 class="works__title block-title_styled">ReCent WoRks</h2>
               <div class="works__items">
-                <a href="#" class="work">
+                <a href="work-detail.html" class="work">
                   <div class="work__preview adaptive-image">
                     <img src="img/contentImg4.jpg" loading='lazy' alt='work1' width=30 height=30>
                   </div>
@@ -199,7 +199,7 @@
                     <span class="work__date">JuNe 15.2012</span>
                   </div>
                 </a>
-                <a href="#" class="work">
+                <a href="work-detail.html" class="work">
                   <div class="work__preview adaptive-image">
                     <img src="img/contentImg.jpg" loading='lazy' alt='work1' width=30 height=30>
                   </div>
@@ -208,7 +208,7 @@
                     <span class="work__date">JuNe 15.2012</span>
                   </div>
                 </a>
-                <a href="#" class="work">
+                <a href="work-detail.html" class="work">
                   <div class="work__preview adaptive-image">
                     <img src="img/contentImg2.jpg" loading='lazy' alt='work1' width=30 height=30>
                   </div>
@@ -217,7 +217,7 @@
                     <span class="work__date">JuNe 15.2012</span>
                   </div>
                 </a>
-                <a href="#" class="work">
+                <a href="work-detail.html" class="work">
                   <div class="work__preview adaptive-image">
                     <img src="img/contentImg3.jpg" loading='lazy' alt='work1' width=30 height=30>
                   </div>
@@ -236,6 +236,8 @@
   @@include('_footer.html')
 
 </body>
-@@include('_scripts.html')
+@@include('_scripts.html', {
+'filter': false,
+})
 
 </html>
