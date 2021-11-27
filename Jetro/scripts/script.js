@@ -7,9 +7,7 @@ let innerWindowHeight = () => window.innerHeight;
 
 // ? If you see an error here, it's normal.
 function showOrHideFullscreenNav(e) {
-  const fsNavmenu = doc.querySelector('.fullscreen-navmenu');
   let sbWidth = innerWindowWidth() - doc.querySelector('html').clientWidth;
-  let header = doc.querySelector('header');
 
   if (fsNavmenu !== undefined) {
     burger.classList.toggle('active');
@@ -24,8 +22,11 @@ function showOrHideFullscreenNav(e) {
     fsMenuIsActive = !fsMenuIsActive;
   }
 }
-let body = document.querySelector('body');
+let header = doc.querySelector('header');
+let body = doc.querySelector('body');
+
 const burger = doc.getElementById('burgerButton');
+const fsNavmenu = doc.querySelector('.fullscreen-navmenu');
 burger.addEventListener('click', showOrHideFullscreenNav);
 
 let fsMenuIsActive = false;;
@@ -118,3 +119,13 @@ const mainSwiper = new Swiper('.main-slider', {
     slideThumbActiveClass: 'active',
   },
 });;
+
+
+function toggleSidebar(e) {
+  sidebar.classList.toggle('active');
+  toggleSidebarBtn.classList.toggle('active');
+}
+const toggleSidebarBtn = document.getElementById('sidebar-toggle-btn');
+const sidebar = document.querySelector('.sidebar');
+
+toggleSidebarBtn.addEventListener('click', toggleSidebar);

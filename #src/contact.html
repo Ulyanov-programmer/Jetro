@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('_head.html', {
+"title": "Jetro - Contact",
+"activePage": "5",
+})
+
+<body>
+  @@include('_header.html', {
+  "activeLink": "5"
+  })
+
+  <main class="main">
+    <div class="main__body">
+      <div class='page-borders'>
+        <div class='page-borders__body container'>
+          <h1 class="page-title">ContAct Us</h1>
+        </div>
+      </div>
+      <section class='content container'>
+        <div class="content__body">
+          <aside class='map'>
+            <div class='map__body'>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305483.9401586793!2d49.917211214278076!3d53.26098877989909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1638000831037!5m2!1sru!2sru"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                aria-hidden="false"></iframe>
+            </div>
+          </aside>
+          <section class='contact-block'>
+            <div class='contact-block__body'>
+              <div class="contact-block__left-info contact-info">
+                <p class="contact-info__text">
+                  Lorem ipsum dolor sit amet, in consectetur adipiscing elit. Siri Integer nec odio. Praesent libero.
+                  Sed cursus ante
+                  dapibus diam. Sed nisi. Nulla quis sem at nibh elementum.
+                </p>
+                <div class="contact-info__adress">
+                  <h1>Best PSD Freebies</h1>
+                  <address>328 Ave C <br>
+                    Saskatoon, SK <br>
+                    S7R 2V9</address>
+                </div>
+                <address class="contact-info__refs">
+                  <a href='tel:+88005553535'>t: (888) 842 - 8356</a>
+                  <a href='tel:+88005553535'>f: (888) 452 - 9257</a>
+                  <a href='mailto:someEmail@gmail.com'>e: info@psdfreebies.com</a>
+                </address>
+
+              </div>
+              <form class="contact-block__right-form contact-form" action='#'>
+                <input class="contact-form__input" type='text' placeholder='FIRSTNAme' required>
+                <input class="contact-form__input" type='text' placeholder='LAST naME' required>
+                <input class="contact-form__input" type='email' placeholder='FIRSTNAme' required>
+                <textarea spellcheck="false" class="contact-form__textarea" name="message" id="form-message"
+                  rows="10">Dear Jetro. </textarea>
+                <button class="contact-form__submit button" aria-label='send callback' type='submit'>SUbmiT</button>
+              </form>
+            </div>
+          </section>
+        </div>
+        <aside class="sidebar content__sidebar">
+          <button id="sidebar-toggle-btn" class="sidebar__show-btn" aria-label='show-sidebar' type='button'>
+            <img src="img/icons/sidebarBtn.svg" loading='lazy' alt='sidebar-toggle-btn' width=50 height=50>
+          </button>
+          <div class="sidebar__body">
+            <div class="sidebar-block sidebar__block">
+              <span class="sidebar-block__title block-title__styled">AboUt JetRO</span>
+              <p class="sidebar-block__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus
+                ante dapibus
+                diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum.
+              </p>
+            </div>
+            <nav class="sidebar-block sidebar__block">
+              <span class="sidebar-block__title block-title__styled">CateGORIes</span>
+              <ul class="sidebar-block__list">
+                <li class='sidebar-block__list-item'>
+                  <a href='blog.html' target='_blank' rel='noopener noreferrer'>
+                    Video
+                    <span class="sidebar-block__list-item-counter">3</span>
+                  </a>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <a href='blog.html' target='_blank' rel='noopener noreferrer'>
+                    Sports
+                    <span class="sidebar-block__list-item-counter">5</span>
+                  </a>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <a href='blog.html' target='_blank' rel='noopener noreferrer'>
+                    Media
+                    <span class="sidebar-block__list-item-counter">2</span>
+                  </a>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <a href='blog.html' target='_blank' rel='noopener noreferrer'>
+                    Entertainment
+                    <span class="sidebar-block__list-item-counter">7</span>
+                  </a>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <a href='blog.html' target='_blank' rel='noopener noreferrer'>
+                    Life
+                    <span class="sidebar-block__list-item-counter">4</span>
+                  </a>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <a href='blog.html' target='_blank' rel='noopener noreferrer'>
+                    Super Cool Stuff
+                    <span class="sidebar-block__list-item-counter">8</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="sidebar-block sidebar__block">
+              <span class="sidebar-block__title block-title__styled">Photo GallerY</span>
+              <div class="sidebar-block__photo-grid photo-gird">
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  @@include('_footer.html')
+
+</body>
+@@include('_scripts.html', {
+'filter': false,
+})
+
+</html>

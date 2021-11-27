@@ -200,7 +200,7 @@ body
 
 .advantage
   padding: 30px 30px 30px 30px
-  
+
   >*
     &:not(:last-child)
       padding: 0px 0px 20px 0px
@@ -228,23 +228,7 @@ body
 
   &__ref
     flex-grow: 0
-    font-family: bebas
-    text-transform: uppercase
-    color: #fff
-    background: #e8663c
-    border: 1px solid #e8663c
     padding: 5px 9px 5px 9px
-
-    transition: all 0.2s ease
-    &:hover
-      color: #e8663c
-      background: #fff
-
-    @media (max-width: 500px)
-      padding: 7px 12px 7px 12px
-      letter-spacing: 1px
-      font-size: 15px
-      text-align: center
 
 .works
 
@@ -294,7 +278,7 @@ body
   font-family: bebas
   @include adaptive-property ('font-size',18, 16)
 
-  &_styled
+  &__styled
     @extend .block-title
     display: flex
 
@@ -304,3 +288,4 @@ body
       flex-grow: 1
       background: url('../img/line.webp') repeat center / cover
       margin: 0px 0px 0px 20px
+      height: 0.9em

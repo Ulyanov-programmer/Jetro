@@ -28,7 +28,6 @@ let paths = {
   },
   clean: `./${projectFolder}/`,
 }
-let fontsFIle = `${sourceFolder}/sass/_fonts.sass`;
 
 let { scr, dest } = require('gulp'),
   gulp = require('gulp'),
@@ -133,11 +132,11 @@ function fonts() {
 }
 
 function fontsStyle() {
-  let file_content = fs.readFileSync(fontsFIle)
+  let file_content = fs.readFileSync(`${sourceFolder}/sass/_fonts.sass`)
     .toString().replace(/\s/g, "");
 
   if (file_content == "") {
-    fs.writeFile(fontsFIle, '', () => { });
+    fs.writeFile(`${sourceFolder}/sass/_fonts.sass`, '', () => { });
     return fs.readdir(paths.build.fonts, (err, items) => {
 
       if (items) {
@@ -148,7 +147,7 @@ function fontsStyle() {
           fontname = fontname[0];
 
           if (c_fontname != fontname) {
-            fs.appendFile(fontsFIle, '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', () => { });
+            fs.appendFile(`${sourceFolder}/sass/_fonts.sass`, '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', () => { });
           }
           c_fontname = fontname;
         }

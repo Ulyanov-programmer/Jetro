@@ -1,7 +1,5 @@
 function showOrHideFullscreenNav(e) {
-  const fsNavmenu = doc.querySelector('.fullscreen-navmenu');
   let sbWidth = innerWindowWidth() - doc.querySelector('html').clientWidth;
-  let header = doc.querySelector('header');
 
   if (fsNavmenu !== undefined) {
     burger.classList.toggle('active');
@@ -16,8 +14,11 @@ function showOrHideFullscreenNav(e) {
     fsMenuIsActive = !fsMenuIsActive;
   }
 }
-let body = document.querySelector('body');
+let header = doc.querySelector('header');
+let body = doc.querySelector('body');
+
 const burger = doc.getElementById('burgerButton');
+const fsNavmenu = doc.querySelector('.fullscreen-navmenu');
 burger.addEventListener('click', showOrHideFullscreenNav);
 
 let fsMenuIsActive = false;

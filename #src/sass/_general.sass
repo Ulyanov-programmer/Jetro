@@ -19,3 +19,107 @@
     left: 0
     @include size (100%,100%)
     object-fit: cover
+
+.sidebar
+  $toMobileWidth: 950px
+  z-index: 6
+  @media (max-width: $toMobileWidth)
+    padding: 20px 10px 10px 10px
+    position: fixed
+    background: #ffffff
+    width: 60%
+    left: 100vw
+    top: 0
+    transition: all 0.5s ease
+
+    -ms-overflow-style: none
+    scrollbar-width: 0
+
+    ::-webkit-scrollbar
+      width: 0px
+
+    &.active
+      left: 40vw
+
+  &__body
+    position: relative
+    height: 90vh
+    position: sticky
+    top: 25px
+    overflow: auto
+
+    >*
+      &:not(:last-child)
+        margin-bottom: 30px
+
+  &__block
+
+  &-block
+
+    &__title
+      color: #e8603c
+      margin: 0 0 20px 0
+
+    &__text
+      line-height: 1.1
+
+    &__list
+
+    &__list-item
+      a
+        display: block
+        color: #464646
+        padding-bottom: 7px
+
+        &:hover
+          text-decoration: underline
+        &:focus
+          text-decoration: underline
+
+    &__list-item-counter
+      &:before
+        content: '('
+      &:after
+        content: ')'
+
+    &__photo-grid
+
+  &__show-btn
+    color: #000
+    display: none
+    position: absolute
+    left: -70px
+    top: 76px
+    @media (max-width: $toMobileWidth)
+      display: block
+      transition: all 0.5s ease
+
+      &.active
+        transform: rotate(-180deg)
+
+.photo-gird
+  display: grid
+  grid-template-columns: repeat(4, minmax(50px, 1fr))
+  gap: 5px
+
+  &__item-wrap
+    border: 1px solid #e8603c
+
+.button
+  font-family: bebas
+  text-transform: uppercase
+  color: #fff
+  background: #e8663c
+  border: 1px solid #e8663c
+  padding: 5px 9px 5px 9px
+
+  transition: all 0.2s ease
+  &:hover
+    color: #e8663c
+    background: #fff
+
+  @media (max-width: 500px)
+    padding: 7px 12px 7px 12px
+    letter-spacing: 1px
+    font-size: 15px
+    text-align: center

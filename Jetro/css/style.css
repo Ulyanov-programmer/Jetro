@@ -91,6 +91,10 @@ h6 {
   font-weight: 400;
 }
 
+address {
+  font-style: normal;
+}
+
 .header {
   position: relative;
   display: -webkit-box;
@@ -193,6 +197,10 @@ h6 {
 
 .navmenu__list li a.active {
   color: #e8663c;
+}
+
+.navmenu__list li a.active span {
+  color: #f3af9d;
 }
 
 .navmenu__list li a span {
@@ -407,7 +415,7 @@ h6 {
 @font-face {
   font-family: "bebas";
   font-display: swap;
-  src: url("../fonts/BebasNeue-Regular.woff2") format("woff2");
+  src: url("../fonts/BebasNeue-Regular Cyr.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -450,6 +458,88 @@ h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.sidebar {
+  z-index: 6;
+}
+
+.sidebar__body {
+  position: relative;
+  height: 90vh;
+  position: sticky;
+  top: 25px;
+  overflow: auto;
+}
+
+.sidebar__body > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.sidebar-block__title {
+  color: #e8603c;
+  margin: 0 0 20px 0;
+}
+
+.sidebar-block__text {
+  line-height: 1.1;
+}
+
+.sidebar-block__list-item a {
+  display: block;
+  color: #464646;
+  padding-bottom: 7px;
+}
+
+.sidebar-block__list-item a:hover {
+  text-decoration: underline;
+}
+
+.sidebar-block__list-item a:focus {
+  text-decoration: underline;
+}
+
+.sidebar-block__list-item-counter:before {
+  content: '(';
+}
+
+.sidebar-block__list-item-counter:after {
+  content: ')';
+}
+
+.sidebar__show-btn {
+  color: #000;
+  display: none;
+  position: absolute;
+  left: -70px;
+  top: 76px;
+}
+
+.photo-gird {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  gap: 5px;
+}
+
+.photo-gird__item-wrap {
+  border: 1px solid #e8603c;
+}
+
+.button {
+  font-family: bebas;
+  text-transform: uppercase;
+  color: #fff;
+  background: #e8663c;
+  border: 1px solid #e8663c;
+  padding: 5px 9px 5px 9px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  color: #e8663c;
+  background: #fff;
 }
 
 body {
@@ -651,20 +741,7 @@ body button {
   -webkit-box-flex: 0;
       -ms-flex-positive: 0;
           flex-grow: 0;
-  font-family: bebas;
-  text-transform: uppercase;
-  color: #fff;
-  background: #e8663c;
-  border: 1px solid #e8663c;
   padding: 5px 9px 5px 9px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.advantage__ref:hover {
-  color: #e8663c;
-  background: #fff;
 }
 
 .works__title {
@@ -703,19 +780,19 @@ body button {
 }
 
 .block-title,
-.block-title_styled {
+.block-title__styled {
   text-transform: uppercase;
   font-family: bebas;
   font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (940 - 320)));
 }
 
-.block-title_styled {
+.block-title__styled {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.block-title_styled:after {
+.block-title__styled:after {
   content: '';
   display: inline-block;
   -webkit-box-flex: 1;
@@ -723,6 +800,7 @@ body button {
           flex-grow: 1;
   background: url("../img/line.webp") repeat center/cover;
   margin: 0px 0px 0px 20px;
+  height: 0.9em;
 }
 
 @media (min-width: 500px) {
@@ -808,6 +886,43 @@ body button {
     -webkit-transform: translate(-50%, 0%);
         -ms-transform: translate(-50%, 0%);
             transform: translate(-50%, 0%);
+  }
+}
+
+@media (max-width: 950px) {
+  .sidebar {
+    padding: 20px 10px 10px 10px;
+    position: fixed;
+    background: #ffffff;
+    width: 60%;
+    left: 100vw;
+    top: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+  }
+
+  .sidebar ::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  .sidebar.active {
+    left: 40vw;
+  }
+
+  .sidebar__show-btn {
+    display: block;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .sidebar__show-btn.active {
+    -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+            transform: rotate(-180deg);
   }
 }
 
@@ -933,6 +1048,13 @@ body button {
 }
 
 @media (max-width: 500px) {
+  .button {
+    padding: 7px 12px 7px 12px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-align: center;
+  }
+
   .benefits__item {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
@@ -949,13 +1071,6 @@ body button {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
     padding: 10px 10px 10px 10px;
-  }
-
-  .advantage__ref {
-    padding: 7px 12px 7px 12px;
-    letter-spacing: 1px;
-    font-size: 15px;
-    text-align: center;
   }
 }
 

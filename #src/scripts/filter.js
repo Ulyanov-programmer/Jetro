@@ -10,7 +10,7 @@ function filtContentByType(e) {
   }
 }
 const filterButtons = document.querySelectorAll('[data-filt-content]');
-for (const filtButton of filterButtons) {
+for (let filtButton of filterButtons) {
   filtButton.addEventListener('click', filtContentByType);
 }
 const works = document.querySelectorAll('[data-content-type]');
