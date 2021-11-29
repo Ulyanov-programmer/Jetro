@@ -466,10 +466,16 @@ address {
 
 .sidebar__body {
   position: relative;
-  height: 90vh;
+  height: 80vh;
   position: sticky;
   top: 25px;
   overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+}
+
+.sidebar__body ::-webkit-scrollbar {
+  width: 0px;
 }
 
 .sidebar__body > *:not(:last-child) {
@@ -508,11 +514,30 @@ address {
 }
 
 .sidebar__show-btn {
-  color: #000;
   display: none;
   position: absolute;
   left: -70px;
   top: 76px;
+}
+
+.sidebar__show-btn svg {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar__show-btn svg:hover rect {
+  fill: #e8663c;
+}
+
+.sidebar__show-btn svg rect {
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  fill: #dddddd;
+  height: 2px;
 }
 
 .photo-gird {
@@ -537,7 +562,8 @@ address {
   transition: all 0.2s ease;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   color: #e8663c;
   background: #fff;
 }
@@ -891,35 +917,25 @@ body button {
 
 @media (max-width: 950px) {
   .sidebar {
-    padding: 20px 10px 10px 10px;
+    padding: 20px 15px 10px 10px;
     position: fixed;
-    background: #ffffff;
-    width: 60%;
+    background: #fff;
     left: 100vw;
     top: 0;
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    -ms-overflow-style: none;
-    scrollbar-width: 0;
-  }
-
-  .sidebar ::-webkit-scrollbar {
-    width: 0px;
   }
 
   .sidebar.active {
-    left: 40vw;
+    left: 60vw;
   }
 
   .sidebar__show-btn {
     display: block;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
   }
 
-  .sidebar__show-btn.active {
+  .sidebar__show-btn.active svg {
     -webkit-transform: rotate(-180deg);
         -ms-transform: rotate(-180deg);
             transform: rotate(-180deg);
@@ -1000,6 +1016,14 @@ body button {
   .socials a {
     padding: 0px 10px 0px 10px;
   }
+
+  .sidebar {
+    width: auto;
+  }
+
+  .sidebar.active {
+    left: 30vw;
+  }
 }
 
 @media (max-width: 550px) {
@@ -1075,6 +1099,14 @@ body button {
 }
 
 @media (max-width: 426px) {
+  .sidebar__show-btn {
+    left: -35px;
+  }
+
+  .sidebar__show-btn.active {
+    left: -55px;
+  }
+
   .page-title {
     text-align: center;
   }

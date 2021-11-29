@@ -62,7 +62,15 @@
         </div>
         <aside class="sidebar content__sidebar">
           <button id="sidebar-toggle-btn" class="sidebar__show-btn" aria-label='show-sidebar' type='button'>
-            <img src="img/icons/sidebarBtn.svg" loading='lazy' alt='sidebar-toggle-btn' width=50 height=50>
+            <svg id='sidebar-svg' version="1.1" height='50' width='50' xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xml:space="preserve">
+              <circle cx="8" cy="8" r="8" class="bg" />
+              <rect x="2.4" y="5.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.0849 5.733)" class="top-arrow"
+                width='6' />
+              <rect x="3.6" y="7" width='10' class="center-arrow" />
+              <rect x="2.4" y="8.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 8.2222 -1.0626)" class="bottom-arrow"
+                width='6' />
+            </svg>
           </button>
           <div class="sidebar__body">
             <div class="sidebar-block sidebar__block">
