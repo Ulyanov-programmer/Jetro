@@ -1,23 +1,5 @@
 @import "mixins"
 
-.content
-  display: flex
-  margin: auto
-  padding-top: 25px
-
-  &__body
-    flex: 1 1 auto
-    >*
-      &:not(:last-child)
-        margin-bottom: 30px
-        margin-top: 0px
-
-    @media (min-width: 950px)
-      padding: 0 45px 0 0
-
-  &__sidebar
-    flex: 0 0 210px
-
 .map
 
   &__body

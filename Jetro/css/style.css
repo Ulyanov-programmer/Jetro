@@ -444,6 +444,14 @@ address {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "helv-l";
+  font-display: swap;
+  src: url("../fonts/HelveticaNeueCyr-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
 .adaptive-image {
   display: block;
   position: relative;
@@ -465,13 +473,14 @@ address {
 }
 
 .sidebar__body {
+  padding: 20px 15px 10px 10px;
   position: relative;
-  height: 80vh;
+  height: 100vh;
   position: sticky;
-  top: 25px;
+  top: 0;
   overflow: auto;
   -ms-overflow-style: none;
-  scrollbar-width: 0;
+  scrollbar-width: non;
 }
 
 .sidebar__body ::-webkit-scrollbar {
@@ -610,6 +619,31 @@ body button {
   margin-top: 15px;
 }
 
+.flex-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  padding-top: 25px;
+}
+
+.flex-content__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.flex-content__body > *:not(:last-child) {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.flex-content .sidebar {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 210px;
+          flex: 0 0 210px;
+}
+
 .page-borders {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -737,7 +771,7 @@ body button {
 }
 
 .advantage > *:not(:last-child) {
-  padding: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .advantage__header {
@@ -768,6 +802,10 @@ body button {
       -ms-flex-positive: 0;
           flex-grow: 0;
   padding: 5px 9px 5px 9px;
+}
+
+.advantage__ref:not(:last-child) {
+  margin: 0px 20px 0px 0px;
 }
 
 .works__title {
@@ -874,7 +912,7 @@ body button {
 @media (min-width: 768px) {
   html {
     -ms-overflow-style: none;
-    scrollbar-width: 0;
+    scrollbar-width: none;
   }
 
   html ::-webkit-scrollbar {
@@ -904,6 +942,12 @@ body button {
   }
 }
 
+@media (min-width: 950px) {
+  .flex-content__body {
+    padding: 0 45px 0 0;
+  }
+}
+
 @media (max-width: 1080px) {
   .main-slider__info {
     width: 65%;
@@ -917,7 +961,6 @@ body button {
 
 @media (max-width: 950px) {
   .sidebar {
-    padding: 20px 15px 10px 10px;
     position: fixed;
     background: #fff;
     left: 100vw;

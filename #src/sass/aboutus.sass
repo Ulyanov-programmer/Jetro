@@ -1,0 +1,89 @@
+$containerWidth: 940
+@import "mixins"
+
+.flex-content__body
+  >*
+    &:not(:last-child)
+      margin-bottom: 20px
+
+.text-block
+
+  &_contain-image
+    >*
+      &:not(:last-child)
+        margin-right: 15px
+
+  &_gris-two-blocks
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 40px
+    @media (max-width: 426px)
+      gap: 20px
+
+  &_gris-three-blocks
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 20px
+
+    @media (max-width: 426px)
+      display: block
+      >*
+        &:not(:last-child)
+          margin-bottom: 10px
+
+  &_quote
+    font-style: italic
+    font-family: helv-l
+    display: flex
+
+    margin: 0 0 0 10%
+    &:before
+      content: ''
+      display: inline-block
+      width: 10px
+      background: #e8663c
+      margin: 0 18px 0 0
+    @media (max-width: 426px)
+      margin: 0 0 0 0px
+
+  &__image-wrap
+    float: left
+    padding-bottom: 35%
+    width: 210px
+
+  p
+    line-height: 1.4
+    .big-letter
+      color: #e8603c
+      font-family: 'helv bold'
+      @include adaptive-property ('font-size',25,20)
+      float: left
+      padding: 0 5px 0 0
+
+.alert-text
+  text-align: center
+  @include adaptive-property ('font-size',15,13)
+  font-style: italic
+
+  &_green
+    color: #98c601
+    background: #effeb9
+    border: 1px solid #98c601
+
+  &_red
+    color: #eb5439
+    background: #fbcbc1
+    border: 1px solid #eb5439
+
+  &_yellow
+    color: #fab418
+    background: #ffe9ad
+    border: 1px solid #fab418
+
+  &_blue
+    color: #4d8fcb
+    background: #d1e4f3
+    border: 1px solid #4d8fcb
+
+  &__body
+    padding: 25px 10px 25px 10px

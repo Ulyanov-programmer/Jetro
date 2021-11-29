@@ -51,6 +51,24 @@ body
         margin-bottom: 15px
         margin-top: 15px
 
+.flex-content
+  display: flex
+  margin: auto
+  padding-top: 25px
+
+  &__body
+    flex: 1 1 auto
+    >*
+      &:not(:last-child)
+        margin-bottom: 10px
+        margin-top: 20px
+
+    @media (min-width: 950px)
+      padding: 0 45px 0 0
+
+  .sidebar
+    flex: 0 0 210px
+
 .page-borders
   display: flex
   justify-content: center
@@ -203,7 +221,7 @@ body
 
   >*
     &:not(:last-child)
-      padding: 0px 0px 20px 0px
+      margin: 0px 0px 20px 0px
 
   @media (max-width: 500px)
     display: flex
@@ -229,6 +247,8 @@ body
   &__ref
     flex-grow: 0
     padding: 5px 9px 5px 9px
+    &:not(:last-child)
+      margin: 0px 20px 0px 0px  
 
 .works
 

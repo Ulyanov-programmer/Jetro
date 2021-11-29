@@ -24,7 +24,6 @@
   $toMobileWidth: 950px
   z-index: 6
   @media (max-width: $toMobileWidth)
-    padding: 20px 15px 10px 10px
     position: fixed
     background: #fff
     left: 100vw
@@ -40,13 +39,14 @@
       left: 30vw
 
   &__body
+    padding: 20px 15px 10px 10px
     position: relative
-    height: 80vh
+    height: 100vh
     position: sticky
-    top: 25px
+    top: 0
     overflow: auto
     -ms-overflow-style: none
-    scrollbar-width: 0
+    scrollbar-width: none
 
     ::-webkit-scrollbar
       width: 0px
