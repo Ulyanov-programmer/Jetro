@@ -5,6 +5,15 @@ let innerWindowWidth = () => window.innerWidth;
 let innerWindowHeight = () => window.innerHeight;
 
 
+function toggleSidebar(e) {
+  sidebar.classList.toggle('active');
+  toggleSidebarBtn.classList.toggle('active');
+}
+const toggleSidebarBtn = document.getElementById('sidebar-toggle-btn');
+
+const sidebar = document.querySelector('.sidebar');
+
+toggleSidebarBtn.addEventListener('click', toggleSidebar);
 // ? If you see an error here, it's normal.
 function showOrHideFullscreenNav(e) {
   let sbWidth = innerWindowWidth() - doc.querySelector('html').clientWidth;
@@ -107,7 +116,7 @@ const mainSwiperDemos = new Swiper('.main-slider__demos', {
 
 const mainSwiper = new Swiper('.main-slider', {
   navigation: {
-    nextEl: ".main-slider__next-btn", prevEl: ".main-slider__prev-btn",
+    nextEl: ".slider-next-btn", prevEl: ".slider-prev-btn",
     disabledClass: 'unactive',
   },
   spaceBetween: 1,
@@ -118,15 +127,13 @@ const mainSwiper = new Swiper('.main-slider', {
     swiper: mainSwiperDemos,
     slideThumbActiveClass: 'active',
   },
+});
+let blogSwiper = new Swiper('.main-content__slider', {
+  navigation: {
+    nextEl: ".slider-next-btn", prevEl: ".slider-prev-btn",
+  },
+  spaceBetween: 1,
+  grabCursor: true,
+  watchOverflow: true,
 });;
   
-
-function toggleSidebar(e) {
-  sidebar.classList.toggle('active');
-  toggleSidebarBtn.classList.toggle('active');
-}
-const toggleSidebarBtn = document.getElementById('sidebar-toggle-btn');
-
-const sidebar = document.querySelector('.sidebar');
-
-toggleSidebarBtn.addEventListener('click', toggleSidebar);

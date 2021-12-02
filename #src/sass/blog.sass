@@ -1,0 +1,104 @@
+$containerWidth: 940
+@import "mixins"
+
+.blog
+
+  &__body
+    position: relative
+    display: grid
+    grid-template: 'main-cont main-cont main-cont main-cont' auto 'meta cont cont cont' auto / auto
+    padding: 0 0 60px 0
+
+    &:after
+      position: absolute
+      bottom: 0
+      left: 0
+      background: url('../img/line.webp') repeat center / cover
+      height: 14px
+      width: 100%
+      content: ''
+
+  &__icon-wrap
+    position: absolute
+    top: 0
+    left: -10px
+    transform: translate(-100%, 0)
+
+    background: #e8603c
+    padding: 25px 25px 25px 25px
+
+  &__main-content
+    grid-area: main-cont
+    margin: 0 0 25px 0
+
+  &__metadata
+    grid-area: meta
+    width: 180px
+    padding: 0 30px 0 0
+
+  &__content
+    grid-area: cont
+    @include firstLevelElementsMargin(20)
+
+  &__title
+    color: #e8603c
+    @include adaptive-property ('font-size',25,19)
+    text-transform: uppercase
+    font-family: bebas
+
+  &__text
+    line-height: 1.5
+    &:after
+      display: inline-block
+      content: ' ...'
+      color: #8caf2f
+
+  &-metadata
+    @include firstLevelElementsMargin(15)
+
+    &__block
+      @include firstLevelElementsMargin(10)
+
+    &__title
+      display: block
+      color: #e8603c
+      @include adaptive-property ('font-size',17,15)
+      text-transform: uppercase
+      font-family: bebas
+
+    &__text
+      display: inline-block
+      color: #bababa
+      span.metateg
+        &:not(:last-child)
+          &:after
+            content: ' | '
+
+    &__ref
+      display: block
+
+.main-content
+  &__image
+    display: block
+    position: relative
+    padding: 0px 0px 56% 0px
+
+    img
+      position: absolute
+      top: 0
+      left: 0
+      @include size (100%,100%)
+      object-fit: cover
+  &__video
+    display: block
+    position: relative
+    padding: 0px 0px 56% 0px
+
+    video
+      position: absolute
+      top: 0
+      left: 0
+      @include size (100%,100%)
+      object-fit: cover
+      
+  &__slider

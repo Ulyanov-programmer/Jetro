@@ -51,23 +51,27 @@ body
         margin-bottom: 15px
         margin-top: 15px
 
-.flex-content
-  display: flex
-  margin: auto
-  padding-top: 25px
+  &-with-sidebar
+    margin: auto
+    padding-top: 25px
 
-  &__body
-    flex: 1 1 auto
-    >*
-      &:not(:last-child)
-        margin-bottom: 10px
-        margin-top: 20px
+    .content__body
+      >*
+        &:not(:last-child)
+          margin-bottom: 10px
+          margin-top: 20px
 
-    @media (min-width: 950px)
-      padding: 0 45px 0 0
+      @media (min-width: 950px)
+        padding: 0 45px 0 0
+        width: 80%
+        margin: 0 auto 0 0
 
-  .sidebar
-    flex: 0 0 210px
+    .sidebar
+      display: inline-block
+      position: sticky
+      bottom: 0
+      left: 100%
+      width: 20%
 
 .page-borders
   display: flex
@@ -105,15 +109,6 @@ body
 
   @media (max-width: 426px)
     text-align: center
-
-.slider
-
-  &__prev-btn
-    @media (max-width: 768px)
-      display: none
-
-  &__next-btn
-    @extend .slider__prev-btn
 
 .main-slider
   &__slide
@@ -157,27 +152,6 @@ body
   &__text
     line-height: 1.2
 
-  &__prev-btn
-    position: absolute
-    top: 50%
-    left: 5%
-    transform: translate(-50%, -50%)
-    cursor: pointer
-    z-index: 1
-    padding: 50px 30px 50px 30px
-
-    &:hover
-      path
-        opacity: 1
-
-    &.unactive
-      opacity: 0.2
-
-  &__next-btn
-    @extend .main-slider__prev-btn
-    left: 95%
-    transform: translate(-50%, -50%) rotate(180deg)
-
   &__demos
     margin-top: 15px
 
@@ -219,9 +193,7 @@ body
 .advantage
   padding: 30px 30px 30px 30px
 
-  >*
-    &:not(:last-child)
-      margin: 0px 0px 20px 0px
+  @include firstLevelElementsMargin(20)
 
   @media (max-width: 500px)
     display: flex
@@ -248,7 +220,7 @@ body
     flex-grow: 0
     padding: 5px 9px 5px 9px
     &:not(:last-child)
-      margin: 0px 20px 0px 0px  
+      margin: 0px 20px 0px 0px
 
 .works
 
@@ -278,9 +250,7 @@ body
     font-family: bebas
     border: 1px solid #dbdbdb
     border-top: none
-    >*
-      &:not(:last-child)
-        padding-bottom: 10px
+    @include firstLevelElementsMargin(10)
 
   &__title
     display: block

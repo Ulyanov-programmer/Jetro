@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('_head.html', {
+"title": "Jetro - About Us",
+"activePage": "3",
+'slider': true,
+})
+
+<body>
+  @@include('_header.html', {
+  "activeLink": "3"
+  })
+
+  <main class="main">
+    <div class="main__body">
+      <div class='page-borders'>
+        <div class='page-borders__body container'>
+          <h1 class="page-title">bloG</h1>
+        </div>
+      </div>
+      <section class='content content-with-sidebar container'>
+        <div class="content__body">
+          <section class='blog' data-content-type="media">
+            <div class='blog__body'>
+              <div class="blog__icon-wrap">
+                <img src="img/blog-icons/slider.png" loading='lazy' alt='blog-icon' width=28 height=31>
+              </div>
+              <!-- TODO: Сделать возможность раздельного управления при нескольких слайдерах.
+              Думаю, стоит начать с объявления переменных слайдеров в цикле. -->
+              <div class="blog__main-content main-content__slider swiper">
+                <div class='swiper-wrapper'>
+                  <div class='swiper-slide'>Slide 1</div>
+                  <div class='swiper-slide'>Slide 2</div>
+                  <div class='swiper-slide'>Slide 3</div>
+                </div>
+                <div class='slider-prev-btn'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="52">
+                    <path fill-rule="evenodd" opacity=".9" fill="#000"
+                      d="M25.836-.001.014 26l25.822 26.001 9.631-9.565L19.145 26 35.467 9.564 25.836-.001z" />
+                  </svg>
+                </div>
+                <div class='slider-next-btn'>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="52">
+                    <path fill-rule="evenodd" opacity=".9" fill="#000"
+                      d="M25.836-.001.014 26l25.822 26.001 9.631-9.565L19.145 26 35.467 9.564 25.836-.001z" />
+                  </svg>
+                </div>
+              </div>
+              
+              <!-- <div class="blog__main-content main-content__video">
+                <video poster='video/poster.png' controls>
+                  <source src='video/main-video.webm' type='video/webm'>
+                  <source src='video/main-video.mp4' type='video/mp4'>
+                </video>
+              
+              </div> -->
+              <!-- <div class="blog__main-content main-content__image">
+                <img src="img/contentImg5.jpg" loading='lazy' alt='main-image' width=50 height=50>
+              </div> -->
+              <div class="blog__metadata blog-metadata">
+                <div class="blog-metadata__block">
+                  <span class="blog-metadata__title">DatE</span>
+                  <p class="blog-metadata__text">
+                    April 15, 2012
+                  </p>
+                </div>
+                <div class="blog-metadata__block">
+                  <span class="blog-metadata__title">TagS</span>
+                  <p class="blog-metadata__text">
+                    <span class="metateg">Website</span><span class="metateg">Design</span>
+                  </p>
+                </div>
+                <a href="#" class="blog-metadata__block blog-metadata__ref">
+                  <span class="blog-metadata__title">ConnEnts</span>
+                  <p class="blog-metadata__text">
+                    4
+                  </p>
+                </a>
+              </div>
+              <div class="blog__content">
+                <h6 class='blog__title'>title</h6>
+                <p class="blog__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim
+                  hendrerit in usu. Iriure delectus mea at,
+                  vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <aside class="sidebar content__sidebar">
+          <button id="sidebar-toggle-btn" class="sidebar__show-btn" aria-label='show-sidebar' type='button'>
+            <svg id='sidebar-svg' version="1.1" height='50' width='50' xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xml:space="preserve">
+              <circle cx="8" cy="8" r="8" class="bg" />
+              <rect x="2.4" y="5.6" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.0849 5.733)" class="top-arrow"
+                width='6' />
+              <rect x="3.6" y="7" width='10' class="center-arrow" />
+              <rect x="2.4" y="8.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 8.2222 -1.0626)" class="bottom-arrow"
+                width='6' />
+            </svg>
+          </button>
+          <div class="sidebar__body">
+            <div class="sidebar-block sidebar__block">
+              <span class="sidebar-block__title block-title__styled">AboUt JetRO</span>
+              <p class="sidebar-block__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praese nt libero. Sed cursus
+                ante dapibus
+                diam. Sed nisi. Nulla quis sem at nibh elemen tum imperdiet. Duis sagittis ipsum.
+              </p>
+            </div>
+            <nav class="sidebar-block sidebar__block">
+              <span class="sidebar-block__title block-title__styled">CateGORIes</span>
+              <ul class="sidebar-block__list">
+                <li class='sidebar-block__list-item'>
+                  <button aria-label='media-filt' data-filt-content="video" type='button'>Video
+                    <span class="sidebar-block__list-item-counter">3</span>
+                  </button>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <button aria-label='media-filt' data-filt-content="sports" type='button'>Sports
+                    <span class="sidebar-block__list-item-counter">5</span>
+                  </button>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <button aria-label='media-filt' data-filt-content="media" type='button'>Media
+                    <span class="sidebar-block__list-item-counter">2</span>
+                  </button>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <button aria-label='media-filt' data-filt-content="entertainment" type='button'>Entertainment
+                    <span class="sidebar-block__list-item-counter">7</span>
+                  </button>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <button aria-label='media-filt' data-filt-content="life" type='button'>Life
+                    <span class="sidebar-block__list-item-counter">4</span>
+                  </button>
+                </li>
+                <li class='sidebar-block__list-item'>
+                  <button aria-label='media-filt' data-filt-content="scs" type='button'>Super Cool Stuff
+                    <span class="sidebar-block__list-item-counter">8</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+            <div class="sidebar-block sidebar__block">
+              <span class="sidebar-block__title block-title__styled">Photo GallerY</span>
+              <div class="sidebar-block__photo-grid photo-gird">
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+                <a href="portfolio.html" class="photo-gird__item-wrap adaptive-image">
+                  <img src="img/favicon.ico" loading='lazy' alt='photo' width=50px height=50px>
+                </a>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  @@include('_footer.html')
+
+</body>
+@@include('_scripts.html', {
+'slider': true,
+'filter': true,
+})
+
+</html>

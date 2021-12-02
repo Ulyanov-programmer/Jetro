@@ -11,6 +11,7 @@ let paths = {
     css: `${projectFolder}/css/`,
     scripts: `${projectFolder}/scripts/`,
     images: `${projectFolder}/img/`,
+    video: `${projectFolder}/video/`,
     fonts: `${projectFolder}/fonts/`,
   },
   scr: {
@@ -18,6 +19,7 @@ let paths = {
     css: [`${sourceFolder}/sass/*.sass`, `!${sourceFolder}/sass/_*.sass`],
     scripts: [`${sourceFolder}/scripts/*.js`, `!${sourceFolder}/scripts/_*.js`],
     images: `${sourceFolder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
+    video: `${sourceFolder}/video/*.{mp4,webm,png}`,
     fonts: `${sourceFolder}/fonts/*`,
   },
   watch: {
@@ -130,6 +132,10 @@ function fonts() {
     }))
     .pipe(dest(paths.build.fonts));
 }
+function videos() {
+  return gulp.src(paths.scr.video)
+    .pipe(dest(paths.build.video));
+}
 
 function fontsStyle() {
   let file_content = fs.readFileSync(`${sourceFolder}/sass/_fonts.sass`)
@@ -174,13 +180,14 @@ function setupSwiperCss() {
     .pipe(dest(paths.build.css));
 };
 
-let build = gulp.series(clean, setupSwiperJs, setupSwiperCss, gulp.parallel(scripts, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, setupSwiperJs, setupSwiperCss, gulp.parallel(scripts, css, html, videos, images, fonts), fontsStyle);
 let watch = gulp.parallel(build, watchFIles, browserSync);
 
 exports.setupSwiperCss = setupSwiperCss;
 exports.setupSwiperJs = setupSwiperJs;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
+exports.videos = videos;
 exports.images = images;
 exports.scripts = scripts;
 exports.css = css;

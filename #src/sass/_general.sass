@@ -20,13 +20,14 @@
     @include size (100%,100%)
     object-fit: cover
 
-.sidebar
+#sidebar
   $toMobileWidth: 950px
   z-index: 6
   @media (max-width: $toMobileWidth)
     position: fixed
     background: #fff
     left: 100vw
+    width: auto
     top: 0
     transition: all 0.5s ease
 
@@ -38,18 +39,18 @@
     &.active
       left: 30vw
 
+.sidebar
+  $toMobileWidth: 950px
+
   &__body
     padding: 20px 15px 10px 10px
-    position: relative
     height: 100vh
-    position: sticky
-    top: 0
     overflow: auto
     -ms-overflow-style: none
     scrollbar-width: none
 
     ::-webkit-scrollbar
-      width: 0px
+      width: 2px
 
     >*
       &:not(:last-child)
@@ -69,7 +70,7 @@
     &__list
 
     &__list-item
-      a
+      a, button
         display: block
         color: #464646
         padding-bottom: 7px
@@ -125,7 +126,7 @@
 
 .photo-gird
   display: grid
-  grid-template-columns: repeat(4, minmax(50px, 1fr))
+  grid-template-columns: repeat(4, minmax(30px, 1fr))
   gap: 5px
 
   &__item-wrap
@@ -149,3 +150,27 @@
     letter-spacing: 1px
     font-size: 15px
     text-align: center
+
+.slider-prev-btn
+  position: absolute
+  top: 50%
+  left: 5%
+  transform: translate(-50%, -50%)
+  cursor: pointer
+  z-index: 1
+  padding: 50px 30px 50px 30px
+
+  &:hover
+    path
+      opacity: 1
+
+    &.unactive
+      opacity: 0.2
+
+  @media (max-width: 768px)
+    display: none
+
+.slider-next-btn
+  @extend .slider-prev-btn
+  left: 95%
+  transform: translate(-50%, -50%) rotate(180deg)

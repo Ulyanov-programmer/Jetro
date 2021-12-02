@@ -4,6 +4,7 @@
 @@include('_head.html', {
 "title": "Jetro - About Us",
 "activePage": "2",
+'slider': false,
 })
 
 <body>
@@ -18,8 +19,8 @@
           <h1 class="page-title">about US</h1>
         </div>
       </div>
-      <section class='flex-content container'>
-        <div class="flex-content__body">
+      <section class='content content-with-sidebar container'>
+        <div class="content__body">
           <div class="text-block">
             <p>Maecenas ipsum metus, semper hendrerit varius mattis, hasr congue sit amet tellus. Aliquam ullamcorper
               dui sed magna
@@ -137,7 +138,7 @@
             </div>
           </section>
         </div>
-        <aside class="sidebar content__sidebar">
+        <aside id="sidebar" class="sidebar content__sidebar">
           <button id="sidebar-toggle-btn" class="sidebar__show-btn" aria-label='show-sidebar' type='button'>
             <svg id='sidebar-svg' version="1.1" height='50' width='50' xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xml:space="preserve">
@@ -239,6 +240,7 @@
 </body>
 @@include('_scripts.html', {
 'filter': false,
+'slider': false,
 })
 
 </html>
