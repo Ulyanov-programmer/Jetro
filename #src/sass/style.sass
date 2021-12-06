@@ -43,9 +43,9 @@ body
     color: #fae0d7
 
 .content
+  margin: auto
 
   &__body
-    margin: auto
     >*
       &:not(:last-child)
         margin-bottom: 15px
@@ -55,23 +55,10 @@ body
     margin: auto
     padding-top: 25px
 
-    .content__body
-      >*
-        &:not(:last-child)
-          margin-bottom: 10px
-          margin-top: 20px
-
-      @media (min-width: 950px)
-        padding: 0 45px 0 0
-        width: 80%
-        margin: 0 auto 0 0
-
-    .sidebar
-      display: inline-block
-      position: sticky
-      bottom: 0
-      left: 100%
-      width: 20%
+    @media (min-width: 950px)
+      display: grid
+      grid-template-columns: auto 210px
+      gap: 45px
 
 .page-borders
   display: flex
@@ -100,6 +87,9 @@ body
       width: 100%
 
 .page-title
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
   text-transform: uppercase
   @include adaptive-property ('font-size',24, 18)
   color: #fff

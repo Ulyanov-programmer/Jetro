@@ -1,13 +1,21 @@
 $containerWidth: 940
 @import "mixins"
 
+.content__body
+  >*
+    margin: 15px 0 45px 0 !important
+    @media (max-width: 426px)
+      margin: 15px 0 30px 0 !important
+
 .blog
 
   &__body
     position: relative
     display: grid
-    grid-template: 'main-cont main-cont main-cont main-cont' auto 'meta cont cont cont' auto / auto
+    grid-template: 'main-cont main-cont main-cont main-cont' auto 'meta cont cont cont' auto / minmax(0px, auto) minmax(0px, auto) minmax(0px, auto) minmax(0px, auto)
     padding: 0 0 60px 0
+    @media (max-width: 426px)
+      padding: 0 0 30px 0
 
     &:after
       position: absolute
@@ -26,6 +34,9 @@ $containerWidth: 940
 
     background: #e8603c
     padding: 25px 25px 25px 25px
+
+    @media (max-width: 950px)
+      display: none
 
   &__main-content
     grid-area: main-cont
@@ -70,12 +81,26 @@ $containerWidth: 940
       display: inline-block
       color: #bababa
       span.metateg
+        line-height: 1.2
         &:not(:last-child)
           &:after
             content: ' | '
 
     &__ref
       display: block
+
+  &__links
+    a
+      color: #a0a0a0
+
+      &:hover,&:focus
+        text-decoration: underline
+        color: #000
+      &:not(:last-child)
+        &:after
+          content: ', '
+
+  &__quote
 
 .main-content
   &__image
@@ -89,16 +114,65 @@ $containerWidth: 940
       left: 0
       @include size (100%,100%)
       object-fit: cover
+
   &__video
-    display: block
-    position: relative
     padding: 0px 0px 56% 0px
 
-    video
-      position: absolute
-      top: 0
-      left: 0
-      @include size (100%,100%)
-      object-fit: cover
-      
   &__slider
+    width: 100%
+    min-height: 200px
+
+    &-img
+      padding: 0 0 50% 0
+
+    &-slide
+    .slider-pagination
+      *
+        box-shadow: 0 0 4px rgba(0,0,0,1)
+      @media (min-width: 768px)
+        display: none
+
+.quote
+
+  &__body
+    background: #f5f5f5
+    padding: 25px 30px 25px 30px
+    @media (max-width: 426px)
+      padding: 15px 20px 15px 20px
+
+  &__text
+    display: flex
+    font-style: italic
+    color: #474747
+    &:before
+      display: inline-block
+      @include size (20px,25px)
+      margin: 0 15px 0 0
+      content: url('../img/blog-icons/inTextQuote.png')
+
+.pagination
+
+  &__body
+    display: flex
+    justify-content: flex-start
+    @media (max-width: 768px)
+      justify-content: flex-end
+    @media (max-width: 426px)
+      justify-content: center
+
+  &__btn
+    font-family: bebas
+    background: #f3b29d
+    padding: 7px 10px 7px 10px
+
+    transition: all 0.2s ease
+    &:not(:last-child)
+      margin: 0 5px 0 0
+    &:hover,&:focus
+      background: #e8663c
+
+    @media (max-width: 768px)
+      background: #e8663c
+      padding: 10px 15px 10px 15px
+      &:not(:last-child)
+        margin: 0 20px 0 0

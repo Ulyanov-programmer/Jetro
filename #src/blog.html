@@ -2,7 +2,7 @@
 <html lang="en">
 
 @@include('_head.html', {
-"title": "Jetro - About Us",
+"title": "Jetro - Blog",
 "activePage": "3",
 'slider': true,
 })
@@ -21,43 +21,38 @@
       </div>
       <section class='content content-with-sidebar container'>
         <div class="content__body">
-          <section class='blog' data-content-type="media">
+          <section class='blog' data-content-type="slider">
             <div class='blog__body'>
               <div class="blog__icon-wrap">
                 <img src="img/blog-icons/slider.png" loading='lazy' alt='blog-icon' width=28 height=31>
               </div>
-              <!-- TODO: Сделать возможность раздельного управления при нескольких слайдерах.
-              Думаю, стоит начать с объявления переменных слайдеров в цикле. -->
               <div class="blog__main-content main-content__slider swiper">
                 <div class='swiper-wrapper'>
-                  <div class='swiper-slide'>Slide 1</div>
-                  <div class='swiper-slide'>Slide 2</div>
-                  <div class='swiper-slide'>Slide 3</div>
+                  <div class='swiper-slide main-content__slider-slide'>
+                    <div class="main-content__slider-img adaptive-image">
+                      <img src="img/sliderImg.jpg" loading='lazy' alt='slide1' width=100 height=100>
+                    </div>
+                  </div>
+                  <div class='swiper-slide main-content__slider-slide'>
+                    <div class="main-content__slider-img adaptive-image">
+                      <img src="img/contentImg6.jpg" loading='lazy' alt='slide1' width=100 height=100>
+                    </div>
+                  </div>
                 </div>
+                <div class='swiper-pagination slider-pagination'></div>
                 <div class='slider-prev-btn'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="52">
-                    <path fill-rule="evenodd" opacity=".9" fill="#000"
+                    <path fill-rule="evenodd" opacity=".9" fill="#fff"
                       d="M25.836-.001.014 26l25.822 26.001 9.631-9.565L19.145 26 35.467 9.564 25.836-.001z" />
                   </svg>
                 </div>
                 <div class='slider-next-btn'>
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="52">
-                    <path fill-rule="evenodd" opacity=".9" fill="#000"
+                    <path fill-rule="evenodd" opacity=".9" fill="#fff"
                       d="M25.836-.001.014 26l25.822 26.001 9.631-9.565L19.145 26 35.467 9.564 25.836-.001z" />
                   </svg>
                 </div>
               </div>
-              
-              <!-- <div class="blog__main-content main-content__video">
-                <video poster='video/poster.png' controls>
-                  <source src='video/main-video.webm' type='video/webm'>
-                  <source src='video/main-video.mp4' type='video/mp4'>
-                </video>
-              
-              </div> -->
-              <!-- <div class="blog__main-content main-content__image">
-                <img src="img/contentImg5.jpg" loading='lazy' alt='main-image' width=50 height=50>
-              </div> -->
               <div class="blog__metadata blog-metadata">
                 <div class="blog-metadata__block">
                   <span class="blog-metadata__title">DatE</span>
@@ -87,8 +82,129 @@
               </div>
             </div>
           </section>
+          <section class='blog' data-content-type="video">
+            <div class='blog__body'>
+              <div class="blog__icon-wrap">
+                <img src="img/blog-icons/video.png" loading='lazy' alt='blog-icon' width=28 height=31>
+              </div>
+              <div class="blog__main-content adaptive-video main-content__video">
+                <video poster='video/poster.png' controls>
+                  <source src='video/main-video.webm' type='video/webm'>
+                  <source src='video/main-video.mp4' type='video/mp4'>
+                </video>
+              </div>
+              <!-- <div class="blog__main-content main-content__image">
+                          <img src="img/contentImg5.jpg" loading='lazy' alt='main-image' width=50 height=50>
+                        </div> -->
+              <div class="blog__metadata blog-metadata">
+                <div class="blog-metadata__block">
+                  <span class="blog-metadata__title">DatE</span>
+                  <p class="blog-metadata__text">
+                    April 15, 2012
+                  </p>
+                </div>
+                <div class="blog-metadata__block">
+                  <span class="blog-metadata__title">TagS</span>
+                  <p class="blog-metadata__text">
+                    <span class="metateg">Website</span><span class="metateg">Design</span>
+                  </p>
+                </div>
+                <a href="#" class="blog-metadata__block blog-metadata__ref">
+                  <span class="blog-metadata__title">ConnEnts</span>
+                  <p class="blog-metadata__text">
+                    4
+                  </p>
+                </a>
+              </div>
+              <div class="blog__content">
+                <h6 class='blog__title'>title</h6>
+                <p class="blog__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim
+                  hendrerit in usu. Iriure delectus mea at,
+                  vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class='blog' data-content-type="default">
+            <div class='blog__body'>
+              <div class="blog__icon-wrap">
+                <img src="img/blog-icons/default.png" loading='lazy' alt='blog-icon' width=28 height=31>
+              </div>
+              <div class="blog__main-content main-content__image">
+                <img src="img/contentImg5.jpg" loading='lazy' alt='main-image' width=50 height=50>
+              </div>
+              <div class="blog__metadata blog-metadata">
+                <div class="blog-metadata__block">
+                  <span class="blog-metadata__title">DatE</span>
+                  <p class="blog-metadata__text">
+                    April 15, 2012
+                  </p>
+                </div>
+                <div class="blog-metadata__block">
+                  <span class="blog-metadata__title">TagS</span>
+                  <p class="blog-metadata__text">
+                    <span class="metateg">Website</span><span class="metateg">Design</span>
+                  </p>
+                </div>
+                <a href="#" class="blog-metadata__block blog-metadata__ref">
+                  <span class="blog-metadata__title">ConnEnts</span>
+                  <p class="blog-metadata__text">
+                    4
+                  </p>
+                </a>
+              </div>
+              <div class="blog__content">
+                <h6 class='blog__title'>title</h6>
+                <p class="blog__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim
+                  hendrerit in usu. Iriure delectus mea at,
+                  vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class='blog' data-content-type="link">
+            <div class='blog__body'>
+              <div class="blog__icon-wrap">
+                <img src="img/blog-icons/link.png" loading='lazy' alt='blog-icon' width=28 height=31>
+              </div>
+              <div class="blog__content">
+                <h6 class='blog__title'>title</h6>
+                <div class='blog__links'>
+                  <a class='blog__ref' href='#' target='_blank' rel='noopener noreferrer'>www.bestpsdfreebies.com</a>
+                </div>
+                <p class="blog__text">Lorem ipsum dolor sit amet, sit an molestie neglegentur concludaturque. Possim
+                  hendrerit in usu. Iriure delectus mea at,
+                  vis dicit laudem ex, vel eu possim imperdiet consequuntur. Brute ipsum tincidunt vim ei.
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class='blog' data-content-type="quote">
+            <div class='blog__body'>
+              <div class="blog__icon-wrap">
+                <img src="img/blog-icons/quote.png" loading='lazy' alt='blog-icon' width=28 height=31>
+              </div>
+              <div class="blog__main-content">
+                <div class="blog__quote quote">
+                  <div class="quote__body">
+                    <p class="quote__text">
+                      Write anything you want here in this quotable area. Something unique you want people to learn
+                      about your website or some cool random fact. Its totally up to you.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class='pagination'>
+            <div class='pagination__body'>
+              <button class='pagination__btn' aria-label='enterPageNumberHere' type='button'>1</button><button
+                class='pagination__btn' aria-label='enterPageNumberHere' type='button'>2</button><button
+                class='pagination__btn' aria-label='enterPageNumberHere' type='button'>3</button>
+            </div>
+          </section>
         </div>
-        <aside class="sidebar content__sidebar">
+        <aside id="sidebar" class="sidebar content__sidebar">
           <button id="sidebar-toggle-btn" class="sidebar__show-btn" aria-label='show-sidebar' type='button'>
             <svg id='sidebar-svg' version="1.1" height='50' width='50' xmlns="http://www.w3.org/2000/svg"
               xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16" xml:space="preserve">
@@ -113,32 +229,27 @@
               <span class="sidebar-block__title block-title__styled">CateGORIes</span>
               <ul class="sidebar-block__list">
                 <li class='sidebar-block__list-item'>
-                  <button aria-label='media-filt' data-filt-content="video" type='button'>Video
+                  <button aria-label='videos' data-filt-content="video" type='button'>Video
                     <span class="sidebar-block__list-item-counter">3</span>
                   </button>
                 </li>
                 <li class='sidebar-block__list-item'>
-                  <button aria-label='media-filt' data-filt-content="sports" type='button'>Sports
+                  <button aria-label='quotes' data-filt-content="quote" type='button'>Quotes
                     <span class="sidebar-block__list-item-counter">5</span>
                   </button>
                 </li>
                 <li class='sidebar-block__list-item'>
-                  <button aria-label='media-filt' data-filt-content="media" type='button'>Media
+                  <button aria-label='Slider' data-filt-content="slider" type='button'>Slider
                     <span class="sidebar-block__list-item-counter">2</span>
                   </button>
                 </li>
                 <li class='sidebar-block__list-item'>
-                  <button aria-label='media-filt' data-filt-content="entertainment" type='button'>Entertainment
+                  <button aria-label='Links' data-filt-content="link" type='button'>Links
                     <span class="sidebar-block__list-item-counter">7</span>
                   </button>
                 </li>
                 <li class='sidebar-block__list-item'>
-                  <button aria-label='media-filt' data-filt-content="life" type='button'>Life
-                    <span class="sidebar-block__list-item-counter">4</span>
-                  </button>
-                </li>
-                <li class='sidebar-block__list-item'>
-                  <button aria-label='media-filt' data-filt-content="scs" type='button'>Super Cool Stuff
+                  <button data-filt-content="all" type='button' aria-label='All'>All
                     <span class="sidebar-block__list-item-counter">8</span>
                   </button>
                 </li>

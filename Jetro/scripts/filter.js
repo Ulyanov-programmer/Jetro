@@ -1,5 +1,5 @@
 function filtContentByType(e) {
-  let typeOfContent = e.target.dataset.filtContent;
+  let typeOfContent = e.currentTarget.dataset.filtContent;
 
   for (const work of works) {
     if (typeOfContent === 'all' || work.dataset.contentType === typeOfContent) {

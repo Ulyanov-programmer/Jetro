@@ -20,6 +20,18 @@
     @include size (100%,100%)
     object-fit: cover
 
+.adaptive-video
+  display: block
+  position: relative
+  padding: 0px 0px 100% 0px
+
+  video
+    position: absolute
+    top: 0
+    left: 0
+    @include size (100%,100%)
+    object-fit: contain
+
 #sidebar
   $toMobileWidth: 950px
   z-index: 6
@@ -45,12 +57,10 @@
   &__body
     padding: 20px 15px 10px 10px
     height: 100vh
-    overflow: auto
-    -ms-overflow-style: none
-    scrollbar-width: none
 
-    ::-webkit-scrollbar
-      width: 2px
+    position: sticky
+    top: 0
+    overflow: auto
 
     >*
       &:not(:last-child)
@@ -164,11 +174,14 @@
     path
       opacity: 1
 
-    &.unactive
-      opacity: 0.2
+  &.unactive
+    opacity: 0.2
 
   @media (max-width: 768px)
     display: none
+
+  path
+    transition: all 0.2s ease
 
 .slider-next-btn
   @extend .slider-prev-btn

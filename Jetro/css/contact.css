@@ -74,26 +74,36 @@
 
 .contact-form__input::-webkit-input-placeholder {
   opacity: 1;
+  font-family: bebas;
+  color: #e8603c;
   text-transform: uppercase;
 }
 
 .contact-form__input::-moz-placeholder {
   opacity: 1;
+  font-family: bebas;
+  color: #e8603c;
   text-transform: uppercase;
 }
 
 .contact-form__input:-ms-input-placeholder {
   opacity: 1;
+  font-family: bebas;
+  color: #e8603c;
   text-transform: uppercase;
 }
 
 .contact-form__input::-ms-input-placeholder {
   opacity: 1;
+  font-family: bebas;
+  color: #e8603c;
   text-transform: uppercase;
 }
 
 .contact-form__input::placeholder {
   opacity: 1;
+  font-family: bebas;
+  color: #e8603c;
   text-transform: uppercase;
 }
 
