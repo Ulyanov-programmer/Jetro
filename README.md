@@ -1,7 +1,20 @@
-# Default Project
-Default Project - my standard project to start any layout. It will be gradually updated and supplemented, this is not the final version.
+# Jetro
+Jetro is a multi-page site of medium complexity. Has sliders, map and filters.
 
 <!-- Ctrl + Shift + V => view this file in VS Code -->
+
+<details>
+<summary>View PC version</summary>
+  <img src="readmeFiles/preview.png" width=100% />
+</details>
+<details>
+<br>
+
+<summary>View Mobile version</summary>
+  <img src="readmeFiles/MOBpreview.png" width=50% />
+</details>
+<br>
+<br>
 
 <details>
  <summary>RU Как запустить?</summary>
