@@ -1,17 +1,25 @@
 $containerWidth: 940
 @import "mixins"
 
-.flex-content__body
+.content__body
   >*
     &:not(:last-child)
       margin-bottom: 20px
+      @media (min-width: 1500px)
+        margin-bottom: 40px
+        @include adaptive-property ('font-size',17,15)
 
 .text-block
 
   &_contain-image
+    display: flex
     >*
       &:not(:last-child)
         margin-right: 15px
+    @media (max-width: 768px)
+      flex-flow: column nowrap
+    @media (min-width: 1300px)
+      flex-flow: column nowrap
 
   &_gris-two-blocks
     display: grid
@@ -47,11 +55,13 @@ $containerWidth: 940
       margin: 0 0 0 0px
 
   &__image-wrap
-    float: left
     padding-bottom: 35%
-    width: 210px
+    flex: 1 0 210px
+    margin: 0 0 15px 0
+    @media (min-width: 1300px)
+      flex-basis: 50%
 
-  p
+  h2,p
     line-height: 1.4
     .big-letter
       color: #e8603c

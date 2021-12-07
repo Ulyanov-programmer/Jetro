@@ -46,6 +46,9 @@ $containerWidth: 940
     grid-area: meta
     width: 180px
     padding: 0 30px 0 0
+    @media (max-width: 540px)
+      width: 80px
+      padding: 0 15px 0 0
 
   &__content
     grid-area: cont
@@ -59,6 +62,7 @@ $containerWidth: 940
 
   &__text
     line-height: 1.5
+    color: #414141
     &:after
       display: inline-block
       content: ' ...'

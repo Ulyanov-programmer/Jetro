@@ -58,6 +58,7 @@
 
 .blog__text {
   line-height: 1.5;
+  color: #414141;
 }
 
 .blog__text:after {
@@ -221,6 +222,13 @@
 
   .pagination__btn:not(:last-child) {
     margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .blog__metadata {
+    width: 80px;
+    padding: 0 15px 0 0;
   }
 }
 

@@ -24,6 +24,7 @@
           <aside class='map'>
             <div class='map__body'>
               <iframe
+                title="We on google maps"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d305483.9401586793!2d49.917211214278076!3d53.26098877989909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416618e22bd879d3%3A0xba95cda9bb3a030b!2z0KHQsNC80LDRgNCwLCDQodCw0LzQsNGA0YHQutCw0Y8g0L7QsdC7Lg!5e0!3m2!1sru!2sru!4v1638000831037!5m2!1sru!2sru"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 aria-hidden="false"></iframe>
@@ -54,7 +55,7 @@
                 <input class="contact-form__input" type='text' placeholder='FIRSTNAme' required>
                 <input class="contact-form__input" type='text' placeholder='LAST naME' required>
                 <input class="contact-form__input" type='email' placeholder='FIRSTNAme' required>
-                <textarea spellcheck="false" class="contact-form__textarea" name="message" id="form-message"
+                <textarea aria-label="Your message" spellcheck="false" class="contact-form__textarea" name="message" id="form-message"
                   rows="10">Dear Jetro. </textarea>
                 <button class="contact-form__submit button" aria-label='send callback' type='submit'>SUbmiT</button>
               </form>
@@ -164,6 +165,7 @@
 @@include('_scripts.html', {
 'filter': false,
 'slider': false,
+'sidebar': true,
 })
 
 </html>
