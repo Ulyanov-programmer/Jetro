@@ -32,9 +32,11 @@
     flex: 1 1 80%
 
 .contact-info
-  >*
-    &:not(:last-child)
-      margin-bottom: 15px
+  @include firstLevelElementsMargin(15)
+  @media (max-width: 500px)
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around
 
   &__text
 

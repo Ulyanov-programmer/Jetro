@@ -535,11 +535,8 @@ address {
 }
 
 .sidebar-block__list-item a:hover,
-.sidebar-block__list-item button:hover {
-  text-decoration: underline;
-}
-
 .sidebar-block__list-item a:focus,
+.sidebar-block__list-item button:hover,
 .sidebar-block__list-item button:focus {
   text-decoration: underline;
 }
@@ -1172,6 +1169,11 @@ body button {
 }
 
 @media (max-width: 426px) {
+  .sidebar-block__list-item a,
+  .sidebar-block__list-item button {
+    padding: 0 0 20px 0;
+  }
+
   .sidebar__show-btn {
     left: -35px;
   }

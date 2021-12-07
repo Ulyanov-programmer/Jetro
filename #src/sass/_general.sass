@@ -85,10 +85,10 @@
         color: #464646
         padding-bottom: 7px
 
-        &:hover
+        &:hover,&:focus
           text-decoration: underline
-        &:focus
-          text-decoration: underline
+        @media (max-width: 426px)
+          padding: 0 0 20px 0
 
     &__list-item-counter
       &:before

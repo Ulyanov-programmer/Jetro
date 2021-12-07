@@ -161,6 +161,18 @@ h1 {
   .contact-block__body > *:not(:last-child) {
     margin-bottom: 30px;
   }
+
+  .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 @media (max-height: 750px) {
